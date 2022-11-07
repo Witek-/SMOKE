@@ -58,6 +58,11 @@ conda create -n SMOKE python=3.7
 git clone https://github.com/lzccccc/SMOKE
 ```
 
+I struggled to run SMOKE model on cuda 11.x environment for last 4 months and finally found a simple solution.
+
+step 1. Visit https://github.com/jinfagang/DCNv2_latest(I appreciate you Jinfagang) step 2. Download all files and folders in src/ folder. step 3. Back to SMOKE directory and replace all files in csrc/ to step 2 files. step 4. rebuild codes: > python setup.py build develop
+now you can run SMOKE model on cuda 11.x environment.
+
 3. Build codes:
 ```
 python setup.py build develop
